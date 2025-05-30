@@ -8,11 +8,11 @@ $setting = App\Models\Setting::where('id',1)->first();
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Destinations</h2>
+                <h2>Điểm Đến</h2>
                 <div class="breadcrumb-container">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Destinations</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Trang Chủ</a></li>
+                        <li class="breadcrumb-item active">Điểm Đến</li>
                     </ol>
                 </div>
             </div>

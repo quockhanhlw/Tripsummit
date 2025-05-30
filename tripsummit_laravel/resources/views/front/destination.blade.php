@@ -11,8 +11,8 @@ $setting = App\Models\Setting::where('id',1)->first();
                 <h2>{{ $destination->name }}</h2>
                 <div class="breadcrumb-container">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('destinations') }}">Destinations</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Trang Chủ</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('destinations') }}">Điểm Đến</a></li>
                         <li class="breadcrumb-item active">{{ $destination->name }}</li>
                     </ol>
                 </div>
@@ -33,7 +33,7 @@ $setting = App\Models\Setting::where('id',1)->first();
                 </div>
                 <div class="main-item mb_50">
                     <h2>
-                        Description
+                        Mô tả
                     </h2>
                     {!! $destination->description !!}
                 </div>
@@ -41,7 +41,7 @@ $setting = App\Models\Setting::where('id',1)->first();
 
                 @if($packages->count()>0)
                 <div class="main-item mb_50">
-                    <h2>Packages</h2>
+                    <h2>Gói du lịch</h2>
                     <div class="package">
                         <div class="row">
                             @foreach($packages as $item)
@@ -75,14 +75,14 @@ $setting = App\Models\Setting::where('id',1)->first();
                                                     <i class="far fa-star"></i>
                                                 @endif
                                             @endfor
-                                            ({{ $item->reviews->count() }} Reviews)
+                                            ({{ $item->reviews->count() }} Đánh giá)
                                         </div>
                                         @else
                                         <div class="review">
                                             @for($i=1; $i<=5; $i++)
                                                 <i class="far fa-star"></i>
                                             @endfor
-                                            ({{ $item->reviews->count() }} Reviews)
+                                            ({{ $item->reviews->count() }} Đánh giá)
                                         </div>
                                         @endif
                                         <div class="element">
@@ -90,7 +90,7 @@ $setting = App\Models\Setting::where('id',1)->first();
                                                 <i class="fas fa-plane-departure"></i> {{ $item->destination->name }}
                                             </div>
                                             <div class="element-right">
-                                                <i class="fas fa-th-large"></i> {{ $item->package_amenities->count() }} Amenities
+                                                <i class="fas fa-th-large"></i> {{ $item->package_amenities->count() }} Tiện nghi
                                             </div>
                                         </div>
                                         <div class="element">
@@ -98,7 +98,7 @@ $setting = App\Models\Setting::where('id',1)->first();
                                                 <i class="fas fa-users"></i> {{ $item->tours->count() }} Tours
                                             </div>
                                             <div class="element-right">
-                                                <i class="fas fa-clock"></i> {{ $item->package_itineraries->count() }} Days
+                                                <i class="fas fa-clock"></i> {{ $item->package_itineraries->count() }} Ngày
                                             </div>
                                         </div>
                                     </div>
@@ -115,32 +115,32 @@ $setting = App\Models\Setting::where('id',1)->first();
                 @if($destination->country != '' || $destination->language != '' || $destination->currency != '' || $destination->area != '' || $destination->timezone != '' || $destination->visa_requirement != '' || $destination->activity != '' || $destination->best_time != '' || $destination->health_safety != '')
                 <div class="main-item mb_50">
                     <h2>
-                        Information
+                        Thông tin
                     </h2>
                     <div class="summary">
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 @if($destination->country != '')
                                 <tr>
-                                    <td><b>Country</b></td>
+                                    <td><b>Quốc gia</b></td>
                                     <td>{{ $destination->country }}</td>
                                 </tr>
                                 @endif
                                 @if($destination->language != '')
                                 <tr>
-                                    <td><b>Languages Spoken</b></td>
+                                    <td><b>Ngôn ngữ</b></td>
                                     <td>{{ $destination->language }}</td>
                                 </tr>
                                 @endif
                                 @if($destination->currency != '')
                                 <tr>
-                                    <td><b>Currency Used</b></td>
+                                    <td><b>Tiền tệ</b></td>
                                     <td>{{ $destination->currency }}</td>
                                 </tr>
                                 @endif
                                 @if($destination->area != '')
                                 <tr>
-                                    <td><b>Area</b></td>
+                                    <td><b>Khu vực</b></td>
                                     <td>
                                         {{ $destination->area }}
                                     </td>
@@ -148,7 +148,7 @@ $setting = App\Models\Setting::where('id',1)->first();
                                 @endif
                                 @if($destination->timezone != '')
                                 <tr>
-                                    <td><b>Time Zone</b></td>
+                                    <td><b>Múi giờ</b></td>
                                     <td>
                                         {{ $destination->timezone }}
                                     </td>
@@ -156,7 +156,7 @@ $setting = App\Models\Setting::where('id',1)->first();
                                 @endif
                                 @if($destination->visa_requirement != '')
                                 <tr>
-                                    <td><b>Visa Requirements</b></td>
+                                    <td><b>Yêu cầu Visa</b></td>
                                     <td>
                                         {!! $destination->visa_requirement !!}
                                     </td>
@@ -164,7 +164,7 @@ $setting = App\Models\Setting::where('id',1)->first();
                                 @endif
                                 @if($destination->activity != '')
                                 <tr>
-                                    <td><b>Activities</b></td>
+                                    <td><b>Hoạt động</b></td>
                                     <td>
                                         {!! $destination->activity !!}
                                     </td>
@@ -172,7 +172,7 @@ $setting = App\Models\Setting::where('id',1)->first();
                                 @endif
                                 @if($destination->best_time != '')
                                 <tr>
-                                    <td><b>Best Time to Visit</b></td>
+                                    <td><b>Thời điểm tốt nhất đến</b></td>
                                     <td>
                                         {!! $destination->best_time !!}
                                     </td>
@@ -180,7 +180,7 @@ $setting = App\Models\Setting::where('id',1)->first();
                                 @endif
                                 @if($destination->health_safety != '')
                                 <tr>
-                                    <td><b>Health and Safety</b></td>
+                                    <td><b>Sức khỏe và an toàn</b></td>
                                     <td>
                                         {!! $destination->health_safety !!}
                                     </td>
@@ -195,7 +195,7 @@ $setting = App\Models\Setting::where('id',1)->first();
                 @if($destination_photos->count() > 0)
                 <div class="main-item mb_50">
                     <h2>
-                        Photos
+                        Ảnh 
                     </h2>
                     <div class="photo-all">
                         <div class="row">
@@ -240,7 +240,7 @@ $setting = App\Models\Setting::where('id',1)->first();
 
                 @if($destination->map != '')
                 <div class="main-item">
-                    <h2>Map</h2>
+                    <h2>Bản đồ</h2>
                     <div class="location-map">
                         {!! $destination->map !!}
                     </div>

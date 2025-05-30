@@ -5,9 +5,9 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header justify-content-between">
-            <h1>Blog Categories</h1>
+            <h1>Chuyên mục bài viết</h1>
             <div class="ml-auto">
-                <a href="{{ route('admin_blog_category_create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Add New</a>
+                <a href="{{ route('admin_blog_category_create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm mới</a>
             </div>
         </div>
         <div class="section-body">
@@ -20,9 +20,9 @@
                                     <thead>
                                         <tr>
                                             <th>SL</th>
-                                            <th>Name</th>
-                                            <th>Slug</th>
-                                            <th>Action</th>
+                                            <th>Tên</th>
+                                            <th>Danh mục</th>
+                                            <th>Hành động</th>
                                         </tr>
                                     </thead>
                                     <tbody>
