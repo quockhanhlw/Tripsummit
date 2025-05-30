@@ -8,11 +8,11 @@ $setting = App\Models\Setting::where('id',1)->first();
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>FAQ</h2>
+                <h2>Câu Hỏi Thường Gặp</h2>
                 <div class="breadcrumb-container">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="breadcrumb-item active">FAQ</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Trang Chủ</a></li>
+                        <li class="breadcrumb-item active">Câu Hỏi Thường Gặp</li>
                     </ol>
                 </div>
             </div>
@@ -28,7 +28,8 @@ $setting = App\Models\Setting::where('id',1)->first();
 
                     @foreach($faqs as $faq)
                     <div class="accordion-item mb_30">
-                        <h2 class="accordion-header" id="heading_{{ $loop->iteration }}">
+                        {{-- Gán ID duy nhất cho mỗi tiêu đề accordion bằng số thứ tự vòng lặp. --}}
+                        <h2 class="accordion-header" id="heading_{{ $loop->iteration }}"> 
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{ $loop->iteration }}" aria-expanded="false" aria-controls="collapse_{{ $loop->iteration }}">
                                 {{ $faq->question }}
                             </button>

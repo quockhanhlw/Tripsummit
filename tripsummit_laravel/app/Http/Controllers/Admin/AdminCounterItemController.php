@@ -5,12 +5,20 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\CounterItem;
+use App\Models\Destination;
+use App\Models\User;
+
+
 
 class AdminCounterItemController extends Controller
 {
     public function index()
     {
         $counter_item = CounterItem::where('id',1)->first();
+        // $destinations = Destination::count();
+        // $users = User::count();
+
+
         return view('admin.counter.index',compact('counter_item'));
     }
     
@@ -40,6 +48,6 @@ class AdminCounterItemController extends Controller
         $obj->status = $request->status;
         $obj->save();
 
-        return redirect()->back()->with('success','Counter Item is Updated Successfully');
+        return redirect()->back()->with('success','Thông Số Hiển Thị Được Chỉnh Thành Công');
     }
 }

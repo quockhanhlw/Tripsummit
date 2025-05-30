@@ -19,13 +19,13 @@
 
             <li class="{{ Request::is('admin/feature/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_feature_index') }}"><i class="fas fa-hand-point-right"></i> <span>Feature</span></a></li>
 
-            <li class="{{ Request::is('admin/counter-item/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_counter_item_index') }}"><i class="fas fa-hand-point-right"></i> <span>Counter Item</span></a></li>
+            <li class="{{ Request::is('admin/counter-item/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_counter_item_index') }}"><i class="fas fa-hand-point-right"></i> <span>Thông số hiển thị</span></a></li>
 
-            <li class="{{ Request::is('admin/testimonial/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_testimonial_index') }}"><i class="fas fa-hand-point-right"></i> <span>Testimonial</span></a></li>
+            <li class="{{ Request::is('admin/testimonial/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_testimonial_index') }}"><i class="fas fa-hand-point-right"></i> <span>Lời Chứng Thực</span></a></li>
 
-            <li class="{{ Request::is('admin/team-member/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_team_member_index') }}"><i class="fas fa-hand-point-right"></i> <span>Team Member</span></a></li>
+            <li class="{{ Request::is('admin/team-member/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_team_member_index') }}"><i class="fas fa-hand-point-right"></i> <span>Nhóm Thành Viên</span></a></li>
 
-            <li class="{{ Request::is('admin/faq/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_faq_index') }}"><i class="fas fa-hand-point-right"></i> <span>FAQ</span></a></li>
+            <li class="{{ Request::is('admin/faq/*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_faq_index') }}"><i class="fas fa-hand-point-right"></i> <span>Câu Hỏi Thường Gặp</span></a></li>
 
             <li class="nav-item dropdown {{ Request::is('admin/blog-category/*')||Request::is('admin/post/*') ? 'active' : '' }}">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i><span>Blog Section</span></a>
@@ -65,7 +65,7 @@
 
             <li class="{{ Request::is('admin/about-item/index') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_about_item_index') }}"><i class="fas fa-hand-point-right"></i> <span>About Page Item</span></a></li>
 
-            <li class="{{ Request::is('admin/contact-item/index') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_contact_item_index') }}"><i class="fas fa-hand-point-right"></i> <span>Contact Page Item</span></a></li>
+            <li class="{{ Request::is('admin/contact-item/index') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_contact_item_index') }}"><i class="fas fa-hand-point-right"></i> <span>Địa Điểm</span></a></li>
 
             <li class="{{ Request::is('admin/term-privacy-item/index') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_term_privacy_item_index') }}"><i class="fas fa-hand-point-right"></i> <span>Term & Privacy Page Item</span></a></li>
 

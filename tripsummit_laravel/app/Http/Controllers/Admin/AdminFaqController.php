@@ -31,7 +31,7 @@ class AdminFaqController extends Controller
         $obj->answer = $request->answer;
         $obj->save();
 
-        return redirect()->route('admin_faq_index')->with('success','FAQ is Created Successfully');
+        return redirect()->route('admin_faq_index')->with('success','Tạo Mới Câu Hỏi Thành Công');
     }
 
     public function edit($id)
@@ -53,13 +53,13 @@ class AdminFaqController extends Controller
         $obj->answer = $request->answer;
         $obj->save();
 
-        return redirect()->route('admin_faq_index')->with('success','FAQ is Updated Successfully');
+        return redirect()->route('admin_faq_index')->with('success','Chỉnh Sửa Câu Hỏi Thành Công');
     }
 
     public function delete($id)
     {
         $faq = Faq::where('id',$id)->first();
         $faq->delete();
-        return redirect()->route('admin_faq_index')->with('success','FAQ is Deleted Successfully');
+        return redirect()->route('admin_faq_index')->with('success','Xóa Câu Hỏi Thành Công');
     }
 }

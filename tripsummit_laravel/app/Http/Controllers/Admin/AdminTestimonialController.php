@@ -27,8 +27,9 @@ class AdminTestimonialController extends Controller
             'comment' => 'required',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
+            // Ví dụ: testimonial_1717059273.jpg
         $final_name = 'testimonial_'.time().'.'.$request->photo->extension();
+            // Di chuyển file đã upload vào thư mục 'public/uploads' với tên mới
         $request->photo->move(public_path('uploads'), $final_name);
 
         $obj = new Testimonial();
@@ -38,7 +39,7 @@ class AdminTestimonialController extends Controller
         $obj->comment = $request->comment;
         $obj->save();
 
-        return redirect()->route('admin_testimonial_index')->with('success','Testimonial is Created Successfully');
+        return redirect()->route('admin_testimonial_index')->with('success','Lời Chứng Thực Được Thêm Thành Công');
     }
 
     public function edit($id)
@@ -62,7 +63,7 @@ class AdminTestimonialController extends Controller
             $request->validate([
                 'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
-
+             // xóa ảnh cũ
             unlink(public_path('uploads/'.$testimonial->photo));
 
             $final_name = 'testimonial_'.time().'.'.$request->photo->extension();
@@ -75,7 +76,7 @@ class AdminTestimonialController extends Controller
         $testimonial->comment = $request->comment;
         $testimonial->save();
 
-        return redirect()->route('admin_testimonial_index')->with('success','Testimonial is Updated Successfully');
+        return redirect()->route('admin_testimonial_index')->with('success','Lời Chứng Thực Được Sửa Thành Công');
     }
 
     public function delete($id)
@@ -83,6 +84,6 @@ class AdminTestimonialController extends Controller
         $testimonial = Testimonial::where('id',$id)->first();
         unlink(public_path('uploads/'.$testimonial->photo));
         $testimonial->delete();
-        return redirect()->route('admin_testimonial_index')->with('success','Testimonial is Deleted Successfully');
+        return redirect()->route('admin_testimonial_index')->with('success','Lời Chứng Thực Được Xóa Thành Công');
     }
 }

@@ -8,11 +8,11 @@ $setting = App\Models\Setting::where('id',1)->first();
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Contact Us</h2>
+                <h2>Liên Hệ Chúng Tôi</h2>
                 <div class="breadcrumb-container">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Contact Us</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Trang Chủ</a></li>
+                        <li class="breadcrumb-item active">Liên Hệ Chúng Tôi</li>
                     </ol>
                 </div>
             </div>
@@ -28,20 +28,20 @@ $setting = App\Models\Setting::where('id',1)->first();
                     <form action="{{ route('contact_submit') }}" method="post">
                         @csrf
                         <div class="mb-3">
-                            <label for="" class="form-label">Name</label>
+                            <label for="" class="form-label">Tên</label>
                             <input type="text" class="form-control" name="name">
                         </div>
                         <div class="mb-3">
-                            <label for="" class="form-label">Email Address</label>
+                            <label for="" class="form-label">Địa Chỉ Email</label>
                             <input type="text" class="form-control" name="email">
                         </div>
                         <div class="mb-3">
-                            <label for="" class="form-label">Message</label>
+                            <label for="" class="form-label">Tin Nhắn</label>
                             <textarea class="form-control" rows="3" name="comment"></textarea>
                         </div>
                         <div class="mb-3">
                             <button type="submit">
-                                Send Message
+                                Gửi Tin Nhắn
                             </button>
                         </div>
                     </form>

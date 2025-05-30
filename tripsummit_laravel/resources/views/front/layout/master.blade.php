@@ -1,3 +1,6 @@
+{{-- trang chính --}}
+
+
 @php
 $setting = App\Models\Setting::where('id',1)->first();
 @endphp
@@ -53,6 +56,7 @@ $setting = App\Models\Setting::where('id',1)->first();
                     </div>
                     <div class="col-md-6 right-side">
                         <ul class="right">
+                            {{-- nếu đăng nhập vào trang thông tin của người dùng  --}}
                             @if(Auth::guard('web')->check())
                             <li class="menu">
                                 <a href="{{ route('user_dashboard') }}"><i class="fas fa-sign-in-alt"></i> Dashboard</a>
@@ -71,8 +75,9 @@ $setting = App\Models\Setting::where('id',1)->first();
             </div>
         </div>
 
+        {{-- bao gồm thanh nav --}}
         @include('front.layout.nav')
-
+        {{--  nội dung trong @section('main_content') ở view con sẽ được chèn vào, nó là tất cả nội dung trong menu chính--}}
         @yield('main_content')
         
         <div class="footer pt_70">

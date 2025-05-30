@@ -49,7 +49,7 @@ class AdminTeamMemberController extends Controller
         $obj->instagram = $request->instagram;
         $obj->save();
 
-        return redirect()->route('admin_team_member_index')->with('success','Team Member is Created Successfully');
+        return redirect()->route('admin_team_member_index')->with('success','Thành Viên Được Tạo Thành Công');
     }
 
     public function edit($id)
@@ -97,7 +97,7 @@ class AdminTeamMemberController extends Controller
         $team_member->instagram = $request->instagram;
         $team_member->save();
 
-        return redirect()->route('admin_team_member_index')->with('success','Team Member is Updated Successfully');
+        return redirect()->route('admin_team_member_index')->with('success','Thành Viên Được Sửa Thành Công');
     }
 
     public function delete($id)
@@ -105,6 +105,6 @@ class AdminTeamMemberController extends Controller
         $team_member = TeamMember::where('id',$id)->first();
         unlink(public_path('uploads/'.$team_member->photo));
         $team_member->delete();
-        return redirect()->route('admin_team_member_index')->with('success','Team Member is Deleted Successfully');
+        return redirect()->route('admin_team_member_index')->with('success','Thành Viên Được Xóa Thành Công');
     }
 }

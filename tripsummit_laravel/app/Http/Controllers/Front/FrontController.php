@@ -73,21 +73,25 @@ class FrontController extends Controller
     public function contact_submit(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'comment' => 'required',
+            // 'name' => 'required',
+            // 'email' => 'required|email',
+            // 'comment' => 'required',
+
+              'name' => 'required|string|min:2|max:50',
+              'email' => 'required|email|max:100',
+              'comment' => 'required|string|min:10|max:1000',
         ]);
 
-        $admin = Admin::where('id',1)->first();
+        $admin = Admin::where('id',2)->first();
 
         $subject = "Contact Form Message";
-        $message = "<b>Name:</b><br>".$request->name."<br><br>";
+        $message = "<b>Tên:</b><br>".$request->name."<br><br>";
         $message .= "<b>Email:</b><br>".$request->email."<br><br>";
-        $message .= "<b>Comment:</b><br>".nl2br($request->comment)."<br>";
+        $message .= "<b>Tin Nhắn:</b><br>".nl2br($request->comment)."<br>";
 
         \Mail::to($admin->email)->send(new Websitemail($subject,$message));
 
-        return redirect()->back()->with('success', 'Your message is submitted successfully. We will contact you soon.');
+        return redirect()->back()->with('Thành Công', 'Tin nhắn của bạn đã được gửi thành công. Chúng tôi sẽ sớm liên hệ với bạn.');
     }
 
     public function subscriber_submit(Request $request)

@@ -10,6 +10,7 @@
     <div class="main-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
+                {{-- ảnh sidebar --}}
                 <a class="navbar-brand" href="{{ route('home') }}">
                     <img src="{{ asset('uploads/'.$setting->logo) }}" alt="">
                 </a>

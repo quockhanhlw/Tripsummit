@@ -20,6 +20,6 @@ class AdminContactItemController extends Controller
         $obj->map_code = $request->map_code;
         $obj->save();
 
-        return redirect()->back()->with('success','Contact Item is Updated Successfully');
+        return redirect()->back()->with('success','Chỉnh Sửa Địa Điểm Thành Công');
     }
 }
