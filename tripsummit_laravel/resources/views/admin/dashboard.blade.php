@@ -15,7 +15,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total sliders</h4>
+                            <h4>Tổng số ảnh trình chiếu</h4>
                         </div>
                         <div class="card-body">
                             {{ $total_slider }}
@@ -30,7 +30,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Testimonials</h4>
+                            <h4>Tổng số phản hồi khách hàng</h4>
                         </div>
                         <div class="card-body">
                             {{ $total_testimonial }}
@@ -45,7 +45,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Team Members</h4>
+                            <h4>Tổng số thành viên nhóm</h4>
                         </div>
                         <div class="card-body">
                             {{ $total_team_members }}
@@ -60,7 +60,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Posts</h4>
+                            <h4>Tổng số bài viết</h4>
                         </div>
                         <div class="card-body">
                             {{ $total_posts }}
@@ -75,7 +75,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Destinations</h4>
+                            <h4>Tổng số điểm đến du lịch</h4>
                         </div>
                         <div class="card-body">
                             {{ $total_destinations }}
@@ -90,7 +90,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Packages</h4>
+                            <h4>Tổng số gói du lịch</h4>
                         </div>
                         <div class="card-body">
                             {{ $total_packages }}
@@ -105,7 +105,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Users</h4>
+                            <h4>Tổng số người dùng</h4>
                         </div>
                         <div class="card-body">
                             {{ $total_users }}
@@ -120,7 +120,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Subscribers</h4>
+                            <h4>Tổng số người đăng ký</h4>
                         </div>
                         <div class="card-body">
                             {{ $total_subscribers }}
@@ -135,7 +135,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Tours</h4>
+                            <h4>Tổng số tour du lịch</h4>
                         </div>
                         <div class="card-body">
                             {{ $total_tours }}

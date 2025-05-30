@@ -11,8 +11,8 @@ $setting = App\Models\Setting::where('id',1)->first();
                 <h2>{{ $team_member->name }}</h2>
                 <div class="breadcrumb-container">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('team_members') }}">Team Members</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('team_members') }}">Thành viên nhóm</a></li>
                         <li class="breadcrumb-item active">{{ $team_member->name }}</li>
                     </ol>
                 </div>
@@ -34,28 +34,28 @@ $setting = App\Models\Setting::where('id',1)->first();
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <tr>
-                            <td>Name</td>
+                            <td>Tên</td>
                             <td>{{ $team_member->name }}</td>
                         </tr>
                         <tr>
-                            <td>Designation</td>
+                            <td>Vị trí công việc</td>
                             <td>{{ $team_member->designation }}</td>
                         </tr>
                         <tr>
-                            <td>Address</td>
+                            <td>Địa chỉ</td>
                             <td>{{ $team_member->address }}</td>
                         </tr>
                         <tr>
-                            <td>Email Address</td>
+                            <td>Email</td>
                             <td>{{ $team_member->email }}</td>
                         </tr>
                         <tr>
-                            <td>Phone</td>
+                            <td>Số điện thoại</td>
                             <td>{{ $team_member->phone }}</td>
                         </tr>
                         @if($team_member->facebook != '' || $team_member->twitter != '' || $team_member->linkedin != '' || $team_member->instagram != '')
                         <tr>
-                            <td>Social Media</td>
+                            <td>Các kênh mạng xã hội</td>
                             <td>
                                 <ul>
                                     @if($team_member->facebook != '')
@@ -79,7 +79,7 @@ $setting = App\Models\Setting::where('id',1)->first();
             </div>
         
             <div class="col-md-12 mt_30">
-                <h4>Biography</h4>
+                <h4>Lý lịch</h4>
                 <div class="description">
                     {!! $team_member->biography !!}
                 </div>
