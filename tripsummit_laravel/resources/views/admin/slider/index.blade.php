@@ -5,9 +5,9 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header justify-content-between">
-            <h1>Sliders</h1>
+            <h1>Ảnh trình chiếu</h1>
             <div class="ml-auto">
-                <a href="{{ route('admin_slider_create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Add New</a>
+                <a href="{{ route('admin_slider_create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm mới</a>
             </div>
         </div>
         <div class="section-body">
@@ -20,9 +20,9 @@
                                     <thead>
                                         <tr>
                                             <th>SL</th>
-                                            <th>Photo</th>
-                                            <th>Heading</th>
-                                            <th>Action</th>
+                                            <th>Hình ảnh</th>
+                                            <th>Tiêu đề lớn</th>
+                                            <th>Hành động</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -35,7 +35,7 @@
                                             <td>{{ $slider->heading }}</td>
                                             <td class="pt_10 pb_10">
                                                 <a href="{{ route('admin_slider_edit',$slider->id) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                                                <a href="{{ route('admin_slider_delete',$slider->id) }}" class="btn btn-danger" onClick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>
+                                                <a href="{{ route('admin_slider_delete',$slider->id) }}" class="btn btn-danger" onClick="return confirm('Bạn có chắc muốn xóa không?');"><i class="fas fa-trash"></i></a>
                                             </td>
                                         </tr>
                                         @endforeach

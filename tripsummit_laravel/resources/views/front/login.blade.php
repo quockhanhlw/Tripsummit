@@ -8,11 +8,11 @@ $setting = App\Models\Setting::where('id',1)->first();
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Login</h2>
+                <h2>Đăng nhập</h2>
                 <div class="breadcrumb-container">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Login</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Trang chủ</a></li>
+                        <li class="breadcrumb-item active">Đăng nhập</li>
                     </ol>
                 </div>
             </div>
@@ -28,22 +28,22 @@ $setting = App\Models\Setting::where('id',1)->first();
                     <form action="{{ route('login_submit') }}" method="post">
                         @csrf
                         <div class="mb-3">
-                            <label for="" class="form-label">Email Address</label>
+                            <label for="" class="form-label">Email</label>
                             <input type="text" class="form-control" name="email" value="{{ old('email') }}">
                         </div>
                         <div class="mb-3">
-                            <label for="" class="form-label">Password</label>
+                            <label for="" class="form-label">Mật khẩu</label>
                             <input type="password" class="form-control" name="password">
                         </div>
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary bg-website">
-                                Login
+                                Đăng nhập
                             </button>
-                            <a href="{{ route('forget_password') }}" class="primary-color">Forget Password?</a>
+                            <a href="{{ route('forget_password') }}" class="primary-color">Quên mật khẩu?</a>
                         </div>
                     </form>
                     <div class="mb-3">
-                        <a href="{{ route('registration') }}" class="primary-color">Don't have an account? Create Account</a>
+                        <a href="{{ route('registration') }}" class="primary-color">Bạn chưa có tài khoản? Tạo ngay đi nào!</a>
                     </div>
                 </div>
             </div>

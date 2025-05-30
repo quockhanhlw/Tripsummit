@@ -5,9 +5,9 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header justify-content-between">
-            <h1>Photos of {{ $destination->name }}</h1>
+            <h1>Bộ sưu tập ảnh {{ $destination->name }}</h1>
             <div class="ml-auto">
-                <a href="{{ route('admin_destination_index') }}" class="btn btn-primary"><i class="fas fa-plus"></i> back to previous</a>
+                <a href="{{ route('admin_destination_index') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Quay lại</a>
             </div>
         </div>
         <div class="section-body">
@@ -20,8 +20,8 @@
                                     <thead>
                                         <tr>
                                             <th>SL</th>
-                                            <th>Photo</th>
-                                            <th>Action</th>
+                                            <th>Ảnh</th>
+                                            <th>Hành động</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -48,12 +48,12 @@
                             <form action="{{ route('admin_destination_photo_submit',$destination->id) }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
-                                    <label class="form-label">Photo *</label>
+                                    <label class="form-label">Ảnh *</label>
                                     <div><input type="file" name="photo"></div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label"></label>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Lưu</button>
                                 </div>
                             </form>
                         </div>

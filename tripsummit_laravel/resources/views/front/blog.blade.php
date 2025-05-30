@@ -8,11 +8,11 @@ $setting = App\Models\Setting::where('id',1)->first();
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Blog</h2>
+                <h2>Bài Viết</h2>
                 <div class="breadcrumb-container">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Blog</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Trang Chủ</a></li>
+                        <li class="breadcrumb-item active">Bài Viết</li>
                     </ol>
                 </div>
             </div>
@@ -40,7 +40,7 @@ $setting = App\Models\Setting::where('id',1)->first();
                             </p>
                         </div>
                         <div class="button-style-2 mt_20">
-                            <a href="{{ route('post',$post->slug) }}">Read More</a>
+                            <a href="{{ route('post',$post->slug) }}">Đọc thêm</a>
                         </div>
                     </div>
                 </div>
